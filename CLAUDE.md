@@ -21,7 +21,10 @@ Location: `.claude/skills/`
 
 ```
 ├── CLAUDE.md
-├── .claude/skills/          ← 7 project skills
+├── .claude/
+│   ├── settings.json        ← Project config + hooks
+│   ├── hooks/               ← 4 workflow automation scripts
+│   └── skills/              ← 7 project skills
 ├── mcp/
 │   ├── fanfic-helper/       ← Custom MCP server source
 │   ├── mcp-config.json      ← All 5 MCP server configs
@@ -44,6 +47,17 @@ Location: `.claude/skills/`
 大纲/伏笔台账.md →  chapter-bridge / expand-scene / continuity-check
 大纲/情绪追踪.md →  chapter-bridge / continuity-check / pacing-ecg
 ```
+
+## Hooks (4)
+
+Automated workflow reminders via `.claude/settings.json` + `.claude/hooks/*.sh`.
+
+| Hook | Trigger | Does |
+|------|---------|------|
+| `startup.sh` | SessionStart | Dashboard: git status + chapter list + character count |
+| `post-edit.sh` | PostToolUse (Write\|Edit) | Reminds: continuity-check → foreshadowing → commit |
+| `pre-stop.sh` | Stop | Warns if uncommitted changes exist |
+| `guard.sh` | PreToolUse (Bash) | Blocks dangerous commands (rm -rf /, force push, etc.) |
 
 ## Quick Start
 
