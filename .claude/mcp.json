@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "chinese-writing-aids": {
+      "command": "python",
+      "args": ["D:/写同人小说/mcp/chinese-writing-aids/server.py"]
+    },
+    "story-timeline-keeper": {
+      "command": "python",
+      "args": ["D:/写同人小说/mcp/story-timeline-keeper/server.py"],
+      "env": {
+        "FANFIC_PROJECT": "D:/写同人小说"
+      }
+    }
+  }
+}

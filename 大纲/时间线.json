@@ -1,0 +1,39 @@
+{
+  "story_start": "2024-03-15",
+  "start_time": "上午9点",
+  "events": [
+    {
+      "id": 1,
+      "chapter": 1,
+      "absolute_time": "第1天上午",
+      "time_offset": "开头",
+      "total_hours": 9.0,
+      "description": "主角在宗门醒来，发现自己失去了记忆",
+      "characters": [
+        "林风",
+        "师父"
+      ],
+      "location": "青云宗",
+      "tags": [
+        "开始",
+        "转折"
+      ]
+    },
+    {
+      "id": 2,
+      "chapter": 1,
+      "absolute_time": "第1天中午",
+      "time_offset": "三小时后",
+      "total_hours": 12.0,
+      "description": "林风在后山发现神秘石碑",
+      "characters": [
+        "林风"
+      ],
+      "location": "后山石碑前",
+      "tags": [
+        "发现",
+        "线索"
+      ]
+    }
+  ]
+}

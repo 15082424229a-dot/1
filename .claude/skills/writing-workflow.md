@@ -1,6 +1,6 @@
 ---
 name: writing-workflow
-description: 同人小说创作的完整工作流调度器——串联7个项目级skills和13个全局级skills，按阶段引导创作，管理文件流转和skill协作。
+description: 同人小说创作的完整工作流调度器——串联21个写作skills，按阶段引导创作，管理文件流转和skill协作。
 ---
 
 # 创作工作流
@@ -11,46 +11,43 @@ description: 同人小说创作的完整工作流调度器——串联7个项目
 
 用户说"开始写作"、"我要写同人"、"创作流程"、"从零开始"、"写作工作流"时触发。
 
-## Skill 矩阵总览（20 个协作 skills）
+## Skill 矩阵总览
 
 ### 创作前 — 规划类
-| Skill | 位置 | 职责 | 产出文件 |
-|-------|------|------|----------|
-| `idea-capture` | 🌐全局 | 灵感捕捉与整理 | `~/.claude/inspiration/` |
-| `story-analyze` | 🌐全局 | 拆解优秀作品学技法 | 无（知识吸收） |
-| `character-profile` | 📁项目 | 角色设定卡 | `角色设定/[角色名].md` |
-| `worldbuilding` | 📁项目 | 世界观/AU/势力 | `世界观/*.md` |
-| `title-synopsis` | 🌐全局 | 标题/文案/标签设计 | 无（辅助） |
-| `chapter-outline` | 📁项目 | 整体+分章大纲 | `大纲/整体大纲.md` |
-| `foreshadowing-tracker` | 🌐全局 | 伏笔台账初始化 | `大纲/伏笔台账.md` |
-| `emotional-arc` | 📁项目 | 情绪追踪初始化 | `大纲/情绪追踪.md` |
+| Skill | 职责 | 产出文件 |
+|-------|------|----------|
+| `idea-capture` | 灵感捕捉与整理 | `.claude/inspiration/` |
+| `story-analyze` | 拆解优秀作品学技法 | 无（知识吸收） |
+| `character-profile` | 角色设定卡 | `角色设定/[角色名].md` |
+| `worldbuilding` | 世界观/AU/势力 | `世界观/*.md` |
+| `title-synopsis` | 标题/文案/标签设计 | 无（辅助） |
+| `chapter-outline` | 整体+分章大纲 | `大纲/整体大纲.md` |
+| `foreshadowing-tracker` | 伏笔台账初始化 | `大纲/伏笔台账.md` |
+| `emotional-arc` | 情绪追踪初始化 | `大纲/情绪追踪.md` |
 
 ### 创作中 — 写作类
-| Skill | 位置 | 职责 | 产出文件 |
-|-------|------|------|----------|
-| `chapter-bridge` | 📁项目 | 章节衔接+上下文恢复 | 无（辅助写作） |
-| `expand-scene` | 🌐全局 | 场景→正文扩写 | `正文/第X章.md` |
-| `dialogue-craft` | 🌐全局 | 对话精修 | 无（修改正文） |
-| `hook-designer` | 🌐全局 | 13式钩子设计 | 无（辅助写作） |
+| Skill | 职责 | 产出文件 |
+|-------|------|----------|
+| `chapter-bridge` | 章节衔接+上下文恢复 | 无（辅助写作） |
+| `expand-scene` | 场景→正文扩写 | `正文/第X章.md` |
+| `dialogue-craft` | 对话精修 | 无（修改正文） |
+| `hook-designer` | 13式钩子设计 | 无（辅助写作） |
+| `meme-fusion` | 实时搜索热门网络梗并融入正文 | 无（修改正文） |
 
 ### 创作后 — 审查类
-| Skill | 位置 | 职责 | 产出文件 |
-|-------|------|------|----------|
-| `continuity-check` | 📁项目 | 12维穿帮检查+同人专项 | 无（审查报告） |
-| `polish-text` | 🌐全局 | 文本润色 | 无（修改正文） |
-| `deai-slop` | 🌐全局 | 去AI味 | 无（修改正文） |
-| `pacing-ecg` | 🌐全局 | 节奏心电图 | 无（分析报告） |
-| `sensitive-tag` | 🌐全局 | 敏感内容标注 | 无（分析报告） |
+| Skill | 职责 | 产出文件 |
+|-------|------|----------|
+| `continuity-check` | 12维穿帮检查+同人专项 | 无（审查报告） |
+| `polish-text` | 文本润色 | 无（修改正文） |
+| `deai-slop` | 去AI味 | 无（修改正文） |
+| `pacing-ecg` | 节奏心电图 | 无（分析报告） |
+| `sensitive-tag` | 敏感内容标注 | 无（分析报告） |
 
 ### 持续性 — 追踪类
-| Skill | 位置 | 职责 | 更新文件 |
-|-------|------|------|----------|
-| `foreshadowing-tracker` | 🌐全局 | 伏笔状态更新 | `大纲/伏笔台账.md` |
-| `emotional-arc` | 📁项目 | 情绪弧线更新 | `大纲/情绪追踪.md` |
-
-> 🌐 = 全局 skill（`~/.claude/skills/`），所有项目通用  
-> 📁 = 项目 skill（`.claude/skills/`），本同人项目专有  
-> 🔧 = 工具 skill — 不直接参与写作流程，但随时可用：`find-skills`（搜索生态技能）、`skill-creator`（创建/优化技能）
+| Skill | 职责 | 更新文件 |
+|-------|------|----------|
+| `foreshadowing-tracker` | 伏笔状态更新 | `大纲/伏笔台账.md` |
+| `emotional-arc` | 情绪弧线更新 | `大纲/情绪追踪.md` |
 
 ---
 
@@ -108,6 +105,7 @@ description: 同人小说创作的完整工作流调度器——串联7个项目
 步骤 1.3  【写作】扩写正文
   └─ /expand-scene 逐场景扩写
   └─ 如果场景对话占比重 → 写完后用 /dialogue-craft 精修对话
+  └─ （可选）用 /meme-fusion 搜索热梗并融入 — 让文字更有网感
   └─ 产出：正文/第N章.md（初稿）
 
 步骤 1.4  【写作后】连续性检查
@@ -200,7 +198,8 @@ character-profile ← → worldbuilding
          │        ↓
          │   expand-scene (扩写正文)
          │      ├→ dialogue-craft (对话精修)
-         │      └→ hook-designer (钩子设计)
+         │      ├→ hook-designer (钩子设计)
+         │      └→ meme-fusion (融梗/热梗)
          │        ↓
          ├── continuity-check (穿帮检查)
          ├── polish-text (润色)
@@ -247,6 +246,13 @@ character-profile ← → worldbuilding
   → chapter-bridge（写作前提醒：角色当前情绪状态）
   → continuity-check（审查时对比情绪连续性）
   → pacing-ecg（节奏分析时使用情绪数据）
+```
+
+### 融梗信息流向
+```
+meme-fusion
+  → expand-scene（扩写时参考梗建议）
+  → dialogue-craft（精修对话时参考梗化表达）
 ```
 
 ---

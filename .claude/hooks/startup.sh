@@ -3,6 +3,9 @@
 
 PROJ="$CLAUDE_PROJECT_DIR"
 
+echo "0" > "$CLAUDE_PROJECT_DIR/.claude/.edit_count"
+# 清除上轮会话的技能触发标记，确保新会话重新自动触发
+rm -f "$CLAUDE_PROJECT_DIR/.claude/.skill_triggered_"*
 echo "━━━ 项目状态 ━━━"
 
 # Git 状态
